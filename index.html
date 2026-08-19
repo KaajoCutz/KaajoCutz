@@ -3,240 +3,2880 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="KaajoCutz – Barber • Grooming • Fragrance">
-<meta name="theme-color" content="#0b0b0b">
+<meta name="theme-color" content="#080808">
+
 <title>KaajoCutz | Barber • Grooming • Fragrance</title>
+
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#f5f5f5;line-height:1.6}
-section{padding:80px 20px}
-section>h2{text-align:center;font-size:2.2rem;margin:0 0 10px}
-section>h2:after{content:"";display:block;width:55px;height:3px;background:#d4af37;margin:12px auto 20px;border-radius:10px}
-section>p{max-width:750px;text-align:center;margin:0 auto 35px;color:#ccc}
 
-/* NAV */
-.navbar{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 5%;background:rgba(8,8,8,.96);border-bottom:1px solid rgba(212,175,55,.3);backdrop-filter:blur(10px)}
-.logo{color:#d4af37;text-decoration:none;font-weight:800;font-size:1.35rem;letter-spacing:2px}
-.nav-links{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap}
-.nav-links a{color:#fff;text-decoration:none;font-size:.92rem}
-.nav-links a:hover{color:#d4af37}
-.nav-cta{border:1px solid #d4af37;border-radius:20px;padding:8px 15px;color:#d4af37!important}
+/* =========================================================
+   RESET
+========================================================= */
 
-/* HERO */
-header{min-height:88vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:40px 20px;background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.7)),url('images/bakgrund.jpg') center/cover no-repeat}
-.overlay{width:min(850px,92%);padding:55px 40px;background:rgba(0,0,0,.38);border:1px solid rgba(212,175,55,.35);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
-header h1{margin:0 0 12px;font-size:clamp(3rem,8vw,5.5rem);line-height:1;letter-spacing:5px;text-transform:uppercase}
-.hero-tagline{margin:0 0 12px;color:#d4af37;font-weight:700;letter-spacing:3px}
-.hero-subtitle{margin:0 0 30px;font-size:1.15rem}
-.hero-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.hero-buttons a{text-decoration:none}
-.hero-button{min-width:175px;padding:14px 25px;border:2px solid #d4af37;border-radius:30px;background:#d4af37;color:#111;font-weight:800;cursor:pointer;transition:.2s}
-.hero-button:hover{transform:translateY(-2px)}
-.hero-button.secondary{background:transparent;color:#fff}
-.hero-button.secondary:hover{background:#fff;border-color:#fff;color:#111}
-
-/* ABOUT */
-#about{background:#111}
-.about-box{max-width:850px;margin:auto;text-align:center;color:#ddd}
-.about-box strong{color:#d4af37}
-
-/* SERVICES */
-#services{background:#f5f5f5;color:#222}
-.services-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service-card{background:#fff;padding:28px 20px;border-radius:18px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.08)}
-.service-card h3{margin-top:0}
-
-/* GALLERY */
-#gallery{background:#0f0f0f}
-.gallery{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.gallery img{width:100%;height:260px;object-fit:cover;border-radius:16px}
-
-/* PRODUCTS */
-#products{background:#f5f5f5;color:#222}
-.products,.perfume-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card,.perfume-card{overflow:hidden;background:#fff;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
-.card img,.perfume-card img{width:100%;height:250px;object-fit:contain;background:#fafafa;padding:12px}
-.card-content,.perfume-card-content{padding:18px;text-align:center}
-.card h3,.perfume-card h3{margin:0 0 8px}
-.card button,.perfume-card button,.order-button{padding:11px 20px;border:0;border-radius:25px;background:#d4af37;color:#111;font-weight:800;cursor:pointer}
-.card button:hover,.perfume-card button:hover,.order-button:hover{opacity:.9}
-
-/* PERFUMES */
-#perfumes{background:#111}
-.perfume-card .description{min-height:45px;color:#666;font-size:.92rem}
-.perfume-card .size{color:#777;font-size:.9rem;margin:5px 0}
-.perfume-card .price{font-size:1.2rem;font-weight:800;margin:10px 0 15px}
-
-/* ORDER */
-#order{background:#f5f5f5;color:#222}
-.order-form{width:min(600px,100%);margin:auto;padding:30px;background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-.order-form label{display:block;margin:14px 0 6px;font-weight:700}
-.order-form input,.order-form select,.order-form textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;font:inherit}
-.order-form textarea{min-height:100px;resize:vertical}
-.order-button{width:100%;margin-top:20px}
-
-/* BOOKING / MAP / CONTACT */
-#booking,#map,#contact{background:#0f0f0f}
-.booking-box,.contact-box{max-width:850px;margin:auto;text-align:center}
-.booking-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.booking-buttons a{padding:12px 22px;border-radius:25px;background:#d4af37;color:#111;font-weight:800;text-decoration:none}
-.map-container{max-width:1000px;margin:auto;overflow:hidden;border-radius:18px}
-.map-container iframe{display:block;width:100%;height:400px;border:0}
-
-/* FOOTER */
-footer{padding:25px;text-align:center;background:#050505;color:#888;font-size:.9rem}
-footer strong{color:#d4af37}
-
-/* MOBILE */
-@media(max-width:900px){
-.services-grid,.gallery{grid-template-columns:repeat(2,1fr)}
-.products,.perfume-grid{grid-template-columns:repeat(2,1fr)}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-@media(max-width:650px){
-section{padding:60px 15px}
-.navbar{position:static;flex-direction:column}
-.nav-links{gap:10px 14px}
-header{min-height:78vh}
-.overlay{padding:42px 20px}
-header h1{letter-spacing:2px}
-.hero-buttons{flex-direction:column}
-.hero-button{width:100%}
-.services-grid,.products,.perfume-grid,.gallery{grid-template-columns:1fr}
-.gallery img{height:300px}
+
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --gold: #d4af37;
+    --gold-light: #f0d77b;
+    --black: #080808;
+    --dark: #101010;
+    --dark-2: #151515;
+    --white: #f5f5f5;
+    --gray: #bdbdbd;
+    --card: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 16px 5%;
+
+    background: rgba(8, 8, 8, 0.94);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.logo {
+    color: var(--gold);
+    text-decoration: none;
+
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    transition: 0.25s ease;
+}
+
+.nav-links a:not(.nav-cta)::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:not(.nav-cta):hover {
+    color: var(--gold);
+}
+
+.nav-links a:not(.nav-cta):hover::after {
+    width: 100%;
+}
+
+.nav-cta {
+    padding: 8px 16px;
+
+    border: 1px solid var(--gold);
+    border-radius: 25px;
+
+    color: var(--gold) !important;
+
+    transition: 0.25s ease;
+}
+
+.nav-cta:hover {
+    background: var(--gold);
+    color: #111 !important;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section {
+    padding: 90px 20px;
+}
+
+section > h2 {
+    text-align: center;
+
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+}
+
+section > h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 14px auto 20px;
+
+    border-radius: 10px;
+}
+
+section > p {
+    max-width: 750px;
+
+    text-align: center;
+
+    margin: 0 auto 40px;
+
+    color: #cfcfcf;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+header {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.78)
+        ),
+        url("images/bakgrund.jpg")
+        center / cover no-repeat;
+
+    position: relative;
+}
+
+header::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,0.08),
+            transparent 60%
+        );
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 95%);
+
+    padding: 70px 40px;
+
+    background: rgba(0,0,0,0.42);
+
+    border: 1px solid rgba(212,175,55,0.35);
+
+    border-radius: 28px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6);
+}
+
+header h1 {
+    margin-bottom: 18px;
+
+    font-size: clamp(3.2rem, 9vw, 6rem);
+
+    line-height: 0.95;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    font-weight: 900;
+}
+
+.hero-tagline {
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero-subtitle {
+    margin-bottom: 35px;
+
+    color: #ddd;
+
+    font-size: 1.15rem;
+}
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+}
+
+.hero-button {
+    min-width: 180px;
+
+    padding: 14px 25px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 30px;
+
+    background: var(--gold);
+
+    color: #111;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(212,175,55,0.25);
+}
+
+.hero-button.secondary {
+    background: transparent;
+
+    color: #fff;
+}
+
+.hero-button.secondary:hover {
+    background: #fff;
+
+    border-color: #fff;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+#about {
+    background: #101010;
+}
+
+.about-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #ddd;
+}
+
+.about-box p {
+    margin-bottom: 18px;
+}
+
+.about-box strong {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+#services {
+    background: #f5f5f5;
+
+    color: #222;
+}
+
+.services-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.service-card {
+    background: #fff;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+#gallery {
+    background: #0d0d0d;
+}
+
+.gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: 0.35s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.025);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.5);
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+#products {
+    background: #f5f5f5;
+
+    color: #222;
+}
+
+.products {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: contain;
+
+    background: #fafafa;
+
+    padding: 15px;
+}
+
+.card-content {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.card button,
+.perfume-card button,
+.order-button {
+    padding: 11px 22px;
+
+    border: 0;
+
+    border-radius: 25px;
+
+    background: var(--gold);
+
+    color: #111;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.card button:hover,
+.perfume-card button:hover,
+.order-button:hover {
+    background: #e5c65d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PERFUME SECTION
+========================================================= */
+
+#perfumes {
+    background:
+        radial-gradient(
+            circle at top,
+            #181818,
+            #0c0c0c 60%
+        );
+}
+
+.perfume-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PERFUME CARD
+========================================================= */
+
+.perfume-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    color: #222;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+
+    transition: 0.3s ease;
+}
+
+.perfume-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 50px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   PERFUME GALLERY
+   PILARNA ÄR CENTRERADE PÅ GALLERYN
+========================================================= */
+
+.perfume-gallery {
+    position: relative;
+
+    width: 100%;
+
+    height: 330px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fafafa,
+            #eeeeee
+        );
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.perfume-main-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 18px;
+
+    cursor: zoom-in;
+
+    transition: transform 0.3s ease;
+}
+
+.perfume-main-image:hover {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   ARROWS
+   EXACT CENTER OF IMAGE AREA
+========================================================= */
+
+.perfume-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    width: 46px;
+    height: 46px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.75);
+
+    color: #fff;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        color 0.2s ease;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.25);
+}
+
+
+/* LEFT */
+
+.perfume-arrow.prev {
+    left: 12px;
+}
+
+
+/* RIGHT */
+
+.perfume-arrow.next {
+    right: 12px;
+}
+
+
+/* HOVER */
+
+.perfume-arrow:hover {
+    background: var(--gold);
+
+    color: #111;
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* COUNTER */
+
+.perfume-counter {
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 12px;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    background: rgba(0,0,0,0.72);
+
+    color: #fff;
+
+    font-size: 0.78rem;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.perfume-thumbnails {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    background: #eeeeee;
+
+    overflow-x: auto;
+}
+
+.perfume-thumb {
+    flex: 0 0 54px;
+
+    width: 54px;
+    height: 54px;
+
+    padding: 2px;
+
+    border: 2px solid transparent;
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.perfume-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.perfume-thumb.active {
+    border-color: var(--gold);
+}
+
+.perfume-thumb img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   PERFUME CONTENT
+========================================================= */
+
+.perfume-card-content {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.perfume-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.05rem;
+}
+
+.perfume-card .description {
+    min-height: 45px;
+
+    color: #666;
+
+    font-size: 0.9rem;
+}
+
+.perfume-card .size {
+    color: #777;
+
+    font-size: 0.9rem;
+
+    margin: 5px 0;
+}
+
+.perfume-card .price {
+    font-size: 1.25rem;
+
+    font-weight: 900;
+
+    margin: 10px 0 15px;
+}
+
+
+/* =========================================================
+   FULLSCREEN PERFUME MODAL
+========================================================= */
+
+.perfume-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0,0,0,0.94);
+
+    backdrop-filter: blur(8px);
+}
+
+.perfume-modal.open {
+    display: flex;
+}
+
+.perfume-modal-content {
+    position: relative;
+
+    width: min(950px, 95vw);
+
+    height: min(85vh, 800px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.perfume-modal-image {
+    max-width: 90%;
+
+    max-height: 82vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/* MODAL BUTTONS */
+
+.modal-close,
+.modal-prev,
+.modal-next {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    background: rgba(255,255,255,0.13);
+
+    transition: 0.2s ease;
+
+    z-index: 10;
+}
+
+.modal-close {
+    top: 0;
+
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 26px;
+}
+
+.modal-prev,
+.modal-next {
+    top: 50%;
+
+    width: 52px;
+    height: 52px;
+
+    transform: translateY(-50%);
+
+    font-size: 30px;
+}
+
+.modal-prev {
+    left: 0;
+}
+
+.modal-next {
+    right: 0;
+}
+
+.modal-close:hover,
+.modal-prev:hover,
+.modal-next:hover {
+    background: var(--gold);
+
+    color: #111;
+}
+
+
+/* =========================================================
+   ORDER
+========================================================= */
+
+#order {
+    background: #f5f5f5;
+
+    color: #222;
+}
+
+.order-form {
+    width: min(600px, 100%);
+
+    margin: auto;
+
+    padding: 32px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.1);
+}
+
+.order-form label {
+    display: block;
+
+    margin: 15px 0 6px;
+
+    font-weight: 700;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font: inherit;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(212,175,55,0.12);
+}
+
+.order-form textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.order-button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 14px;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+#booking,
+#map,
+#contact {
+    background: #0f0f0f;
+}
+
+.booking-box,
+.contact-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.booking-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.booking-buttons a {
+    padding: 13px 24px;
+
+    border-radius: 25px;
+
+    background: var(--gold);
+
+    color: #111;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.booking-buttons a:hover {
+    transform: translateY(-3px);
+
+    background: var(--gold-light);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.4);
+}
+
+.map-container iframe {
+    display: block;
+
+    width: 100%;
+
+    height: 400px;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-box p {
+    margin-bottom: 10px;
+}
+
+.contact-box strong {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: #050505;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .products,
+    .perfume-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 65px 15px;
+    }
+
+    .navbar {
+        position: static;
+
+        flex-direction: column;
+
+        padding: 18px 15px;
+    }
+
+    .nav-links {
+        gap: 11px 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    header {
+        min-height: 80vh;
+    }
+
+    .overlay {
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+
+        letter-spacing: 2px;
+    }
+
+    .hero-tagline {
+        font-size: 0.78rem;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+    .services-grid,
+    .products,
+    .perfume-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 320px;
+    }
+
+
+    /* PERFUME MOBILE */
+
+    .perfume-gallery {
+        height: 320px;
+    }
+
+    .perfume-arrow {
+        width: 42px;
+        height: 42px;
+
+        font-size: 27px;
+    }
+
+    .perfume-arrow.prev {
+        left: 9px;
+    }
+
+    .perfume-arrow.next {
+        right: 9px;
+    }
+
+    .perfume-modal-content {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .perfume-modal-image {
+        max-width: 85%;
+        max-height: 75vh;
+    }
+
+    .modal-prev {
+        left: 0;
+    }
+
+    .modal-next {
+        right: 0;
+    }
+
+    .modal-close {
+        top: -10px;
+        right: 0;
+    }
+
+    .order-form {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .perfume-gallery {
+        height: 290px;
+    }
+
+    .perfume-arrow {
+        width: 38px;
+        height: 38px;
+
+        font-size: 24px;
+    }
+
+    .perfume-arrow.prev {
+        left: 7px;
+    }
+
+    .perfume-arrow.next {
+        right: 7px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <nav class="navbar">
-<a class="logo" href="#home">KaajoCutz</a>
-<div class="nav-links">
-<a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a>
-<a href="#products">Products</a><a href="#perfumes">Perfumes</a><a href="#order">Shop</a>
-<a href="#booking" class="nav-cta">Book Now</a><a href="#contact">Contact</a>
-</div>
+
+    <a class="logo" href="#home">
+        KaajoCutz
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#perfumes">Perfumes</a>
+
+        <a href="#order">Shop</a>
+
+        <a href="#booking" class="nav-cta">
+            Book Now
+        </a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
 </nav>
 
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <header id="home">
-<div class="overlay">
-<h1>KaajoCutz</h1>
-<p class="hero-tagline">BARBER • GROOMING • FRAGRANCE</p>
-<p class="hero-subtitle">Kvalitet och personlig känsla.</p>
-<div class="hero-buttons">
-<a href="https://wa.me/46764274107?text=Hej! jag vill boka en klipptid" target="_blank" rel="noopener"><button class="hero-button" type="button">Boka Klipptid</button></a>
-<a href="#perfumes"><button class="hero-button secondary" type="button">Shoppa Parfym</button></a>
-</div>
-</div>
+
+    <div class="overlay">
+
+        <h1>
+            KaajoCutz
+        </h1>
+
+        <p class="hero-tagline">
+            BARBER • GROOMING • FRAGRANCE
+        </p>
+
+        <p class="hero-subtitle">
+            Kvalitet, stil och personlig känsla.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://wa.me/46764274107?text=Hej!%20Jag%20vill%20boka%20en%20klipptid"
+                target="_blank"
+                rel="noopener"
+            >
+                <button
+                    class="hero-button"
+                    type="button"
+                >
+                    Boka Klipptid
+                </button>
+            </a>
+
+            <a href="#perfumes">
+
+                <button
+                    class="hero-button secondary"
+                    type="button"
+                >
+                    Shoppa Parfym
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
 </header>
 
+
 <main>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
 <section id="about">
-<h2>About KaajoCutz</h2>
-<div class="about-box">
-<p><strong>KaajoCutz – mer än bara en frisör.</strong></p>
-<p>Vi kombinerar modern barbering, personlig stil och premium grooming. Hos oss hittar du professionella hår- och skäggtjänster samt noggrant utvalda produkter och parfymer som hjälper dig att hitta din egen stil och doft.</p>
-<p><strong>Look good. Feel good. Smell good.</strong></p>
-</div>
+
+    <h2>
+        About KaajoCutz
+    </h2>
+
+    <div class="about-box">
+
+        <p>
+            <strong>
+                KaajoCutz – mer än bara en frisör.
+            </strong>
+        </p>
+
+        <p>
+            Vi kombinerar modern barbering, personlig stil
+            och premium grooming.
+        </p>
+
+        <p>
+            Hos oss hittar du professionella hår- och
+            skäggtjänster samt noggrant utvalda produkter
+            och parfymer som hjälper dig att hitta din
+            egen stil och doft.
+        </p>
+
+        <p>
+            <strong>
+                Look good. Feel good. Smell good.
+            </strong>
+        </p>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section id="services">
-<h2>Services</h2><p>Professionell barbering med fokus på detaljer, form och personlig stil.</p>
-<div class="services-grid">
-<div class="service-card"><h3>Herrklippning</h3><p>Modern klippning anpassad efter din stil.</p></div>
-<div class="service-card"><h3>Fade</h3><p>Skarpa fades och rena övergångar.</p></div>
-<div class="service-card"><h3>Skägg</h3><p>Formning och trimning för ett välvårdat skägg.</p></div>
-</div>
+
+    <h2>
+        Services
+    </h2>
+
+    <p>
+        Professionell barbering med fokus på detaljer,
+        form och personlig stil.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ✂️
+            </div>
+
+            <h3>
+                Herrklippning
+            </h3>
+
+            <p>
+                Modern klippning anpassad efter din stil.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💈
+            </div>
+
+            <h3>
+                Fade
+            </h3>
+
+            <p>
+                Skarpa fades och rena övergångar.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🧔
+            </div>
+
+            <h3>
+                Skägg
+            </h3>
+
+            <p>
+                Formning och trimning för ett välvårdat skägg.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
 <section id="gallery">
-<h2>Gallery</h2><p>Här visar vi några av våra senaste looks.</p>
-<div class="gallery">
-<img src="images/haircut_1.jpg" alt="Kaajo haircut_1" loading="lazy">
-<img src="images/haircut_2.jpg" alt="Kaajo haircut_2" loading="lazy">
-<img src="images/haircut_3.jpg" alt="Kaajo haircut_3" loading="lazy">
-<img src="images/haircut_4.jpg" alt="Kaajo haircut_4" loading="lazy">
-<img src="images/haircut_5.jpg" alt="Kaajo haircut_5" loading="lazy">
-</div>
+
+    <h2>
+        Gallery
+    </h2>
+
+    <p>
+        Här visar vi några av våra senaste looks.
+    </p>
+
+    <div class="gallery">
+
+        <img
+            src="images/haircut_1.jpg"
+            alt="Kaajo haircut 1"
+            loading="lazy"
+        >
+
+        <img
+            src="images/haircut_2.jpg"
+            alt="Kaajo haircut 2"
+            loading="lazy"
+        >
+
+        <img
+            src="images/haircut_3.jpg"
+            alt="Kaajo haircut 3"
+            loading="lazy"
+        >
+
+        <img
+            src="images/haircut_4.jpg"
+            alt="Kaajo haircut 4"
+            loading="lazy"
+        >
+
+        <img
+            src="images/haircut_5.jpg"
+            alt="Kaajo haircut 5"
+            loading="lazy"
+        >
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
 <section id="products">
-<h2>Hair & Beard</h2><p>Utvalda groomingprodukter för hår och skägg.</p>
-<div class="products">
-<article class="card"><img src="https://img.kwcdn.com/product/fancy/4c24d7b3-a62c-4210-a5e1-4e4a043845ed.jpg?imageView2/2/w/800/q/70/format/avif" alt="Curling Styling Cream" loading="lazy"><div class="card-content"><h3>Curling Styling Cream</h3><p>För definition och styling.</p><button type="button" onclick="selectProduct('Curling Styling Cream')">Köp</button></div></article>
-<article class="card"><img src="https://img.kwcdn.com/product/fancy/448cec3e-9b6d-4427-9b3e-24641dd0588c.jpg?imageView2/2/w/800/q/70/format/avif"" alt="Batana Oil" loading="lazy"><div class="card-content"><h3>Batana Oil</h3><p>Grooming för hår och skägg.</p><button type="button" onclick="selectProduct('Batana Oil')">Köp</button></div></article>
-<article class="card"><img src="https://media.viskanassets.com/v2/goodformeprod/large/HLS-1_prod1511.jpg"" alt="Shampoo" loading="lazy"><div class="card-content"><h3>Shampoo</h3><p>För en fräsch och ren känsla.</p><button type="button" onclick="selectProduct('Shampoo')">Köp</button></div></article>
-<article class="card"><img src="https://m.media-amazon.com/images/I/715ynJntr1L._AC_SX522_.jpg" alt="Beard Oil" loading="lazy"><div class="card-content"><h3>Beard Oil</h3><p>För mjukare och välvårdat skägg.</p><button type="button" onclick="selectProduct('Beard Oil')">Köp</button></div></article>
-</div>
+
+    <h2>
+        Hair & Beard
+    </h2>
+
+    <p>
+        Utvalda groomingprodukter för hår och skägg.
+    </p>
+
+    <div class="products">
+
+
+        <article class="card">
+
+            <img
+                src="https://img.kwcdn.com/product/fancy/4c24d7b3-a62c-4210-a5e1-4e4a043845ed.jpg?imageView2/2/w/800/q/70/format/avif"
+                alt="Curling Styling Cream"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    Curling Styling Cream
+                </h3>
+
+                <p>
+                    För definition och styling.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('Curling Styling Cream')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <img
+                src="https://img.kwcdn.com/product/fancy/448cec3e-9b6d-4427-9b3e-24641dd0588c.jpg?imageView2/2/w/800/q/70/format/avif"
+                alt="Batana Oil"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    Batana Oil
+                </h3>
+
+                <p>
+                    Grooming för hår och skägg.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('Batana Oil')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <img
+                src="https://media.viskanassets.com/v2/goodformeprod/large/HLS-1_prod1511.jpg"
+                alt="Shampoo"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    Shampoo
+                </h3>
+
+                <p>
+                    För en fräsch och ren känsla.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('Shampoo')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <img
+                src="https://m.media-amazon.com/images/I/715ynJntr1L._AC_SX522_.jpg"
+                alt="Beard Oil"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    Beard Oil
+                </h3>
+
+                <p>
+                    För mjukare och välvårdat skägg.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('Beard Oil')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     PERFUME COLLECTION
+===================================================== -->
 
 <section id="perfumes">
-<h2>Perfume Collection</h2><p>Upptäck våra utvalda dofter.</p>
-<div class="perfume-grid">
-<article class="perfume-card"><img src="images/perfume_1.jpg" alt="Parfym 1" loading="lazy"><div class="perfume-card-content"><h3>JEAN PAUL SCANTEL</h3><p class="description">EAU DE PERFUME.</p><p class="size">100 ml</p><p class="price">419 kr</p><button type="button" onclick="selectProduct('Parfym 1')">Köp</button></div></article>
-<article class="perfume-card"><img src="images/perfume_2.jpg" alt="Parfym 2" loading="lazy"><div class="perfume-card-content"><h3>SAUVAGE FOR MEN</h3><p class="description">EAU DE PERFUME.</p><p class="size">100 ml</p><p class="price">399 kr</p><button type="button" onclick="selectProduct('Parfym 2')">Köp</button></div></article>
-<article class="perfume-card"><img src="images/perfume_3.jpg" alt="Parfym 3" loading="lazy"><div class="perfume-card-content"><h3>ORTO PARISI MEGMARE</h3><p class="description">EAU DE PERFUME.</p><p class="size">100 ml</p><p class="price">499 kr</p><button type="button" onclick="selectProduct('Parfym 3')">Köp</button></div></article>
-<article class="perfume-card"><img src="images/perfume_4.jpg" alt="Parfym 4" loading="lazy"><div class="perfume-card-content"><h3>Jean Paul LEMALE ELIXIER</h3><p class="description">EAU DE PERFUME.</p><p class="size">100 ml</p><p class="price">499 kr</p><button type="button" onclick="selectProduct('Parfym 4')">Köp</button></div></article>
-</div>
+
+    <h2>
+        Perfume Collection
+    </h2>
+
+    <p>
+        Upptäck våra utvalda dofter.
+        Klicka på bilderna eller använd pilarna
+        för att bläddra.
+    </p>
+
+
+    <div class="perfume-grid">
+
+
+        <!-- PERFUME 1 -->
+
+        <article
+            class="perfume-card"
+            data-perfume="JEAN PAUL SCANTEL"
+            data-images='[
+                "images/perfume_1.jpg",
+                "images/perfume_1_2.jpg",
+                "images/perfume_1_3.jpg"
+            ]'
+        >
+
+            <div class="perfume-gallery">
+
+                <img
+                    class="perfume-main-image"
+                    src="images/perfume_1.jpg"
+                    alt="JEAN PAUL SCANTEL"
+                >
+
+                <button
+                    class="perfume-arrow prev"
+                    type="button"
+                    aria-label="Föregående bild"
+                >
+                    ‹
+                </button>
+
+                <button
+                    class="perfume-arrow next"
+                    type="button"
+                    aria-label="Nästa bild"
+                >
+                    ›
+                </button>
+
+                <span class="perfume-counter">
+                    1 / 3
+                </span>
+
+            </div>
+
+            <div class="perfume-thumbnails"></div>
+
+            <div class="perfume-card-content">
+
+                <h3>
+                    JEAN PAUL SCANTEL
+                </h3>
+
+                <p class="description">
+                    EAU DE PERFUME.
+                </p>
+
+                <p class="size">
+                    100 ml
+                </p>
+
+                <p class="price">
+                    419 kr
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('JEAN PAUL SCANTEL')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PERFUME 2 -->
+
+        <article
+            class="perfume-card"
+            data-perfume="SAUVAGE FOR MEN"
+            data-images='[
+                "images/perfume_2.jpg",
+                "images/perfume_2_2.jpg",
+                "images/perfume_2_3.jpg"
+            ]'
+        >
+
+            <div class="perfume-gallery">
+
+                <img
+                    class="perfume-main-image"
+                    src="images/perfume_2.jpg"
+                    alt="SAUVAGE FOR MEN"
+                >
+
+                <button
+                    class="perfume-arrow prev"
+                    type="button"
+                    aria-label="Föregående bild"
+                >
+                    ‹
+                </button>
+
+                <button
+                    class="perfume-arrow next"
+                    type="button"
+                    aria-label="Nästa bild"
+                >
+                    ›
+                </button>
+
+                <span class="perfume-counter">
+                    1 / 3
+                </span>
+
+            </div>
+
+            <div class="perfume-thumbnails"></div>
+
+            <div class="perfume-card-content">
+
+                <h3>
+                    SAUVAGE FOR MEN
+                </h3>
+
+                <p class="description">
+                    EAU DE PERFUME.
+                </p>
+
+                <p class="size">
+                    100 ml
+                </p>
+
+                <p class="price">
+                    399 kr
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('SAUVAGE FOR MEN')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PERFUME 3 -->
+
+        <article
+            class="perfume-card"
+            data-perfume="ORTO PARISI MEGMARE"
+            data-images='[
+                "images/perfume_3.jpg",
+                "images/perfume_3_2.jpg",
+                "images/perfume_3_3.jpg"
+            ]'
+        >
+
+            <div class="perfume-gallery">
+
+                <img
+                    class="perfume-main-image"
+                    src="images/perfume_3.jpg"
+                    alt="ORTO PARISI MEGMARE"
+                >
+
+                <button
+                    class="perfume-arrow prev"
+                    type="button"
+                    aria-label="Föregående bild"
+                >
+                    ‹
+                </button>
+
+                <button
+                    class="perfume-arrow next"
+                    type="button"
+                    aria-label="Nästa bild"
+                >
+                    ›
+                </button>
+
+                <span class="perfume-counter">
+                    1 / 3
+                </span>
+
+            </div>
+
+            <div class="perfume-thumbnails"></div>
+
+            <div class="perfume-card-content">
+
+                <h3>
+                    ORTO PARISI MEGMARE
+                </h3>
+
+                <p class="description">
+                    EAU DE PERFUME.
+                </p>
+
+                <p class="size">
+                    100 ml
+                </p>
+
+                <p class="price">
+                    499 kr
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('ORTO PARISI MEGMARE')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PERFUME 4 -->
+
+        <article
+            class="perfume-card"
+            data-perfume="Jean Paul LEMALE ELIXIER"
+            data-images='[
+                "images/perfume_4.jpg",
+                "images/perfume_4_2.jpg",
+                "images/perfume_4_3.jpg"
+            ]'
+        >
+
+            <div class="perfume-gallery">
+
+                <img
+                    class="perfume-main-image"
+                    src="images/perfume_4.jpg"
+                    alt="Jean Paul LEMALE ELIXIER"
+                >
+
+                <button
+                    class="perfume-arrow prev"
+                    type="button"
+                    aria-label="Föregående bild"
+                >
+                    ‹
+                </button>
+
+                <button
+                    class="perfume-arrow next"
+                    type="button"
+                    aria-label="Nästa bild"
+                >
+                    ›
+                </button>
+
+                <span class="perfume-counter">
+                    1 / 3
+                </span>
+
+            </div>
+
+            <div class="perfume-thumbnails"></div>
+
+            <div class="perfume-card-content">
+
+                <h3>
+                    Jean Paul LEMALE ELIXIER
+                </h3>
+
+                <p class="description">
+                    EAU DE PERFUME.
+                </p>
+
+                <p class="size">
+                    100 ml
+                </p>
+
+                <p class="price">
+                    499 kr
+                </p>
+
+                <button
+                    type="button"
+                    onclick="selectProduct('Jean Paul LEMALE ELIXIER')"
+                >
+                    Köp
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     ORDER
+===================================================== -->
 
 <section id="order">
-<h2>Shop / Beställ</h2><p>Fyll i formuläret så kontaktar vi dig för att bekräfta beställningen.</p>
-<form class="order-form" id="orderForm">
-<label for="name">Namn</label><input id="name" type="text" required>
-<label for="address">Adress</label><input id="address" type="text" required>
-<label for="phone">Telefon</label><input id="phone" type="tel" required>
-<label for="product">Produkt</label>
-<select id="product" required>
-<option value="" disabled selected>Välj produkt</option>
-<optgroup label="Hår & Skägg"><option>Curling Styling Cream</option><option>Batana Oil</option><option>Shampoo</option><option>Beard Oil</option></optgroup>
-<optgroup label="Parfym"><option>JEAN PAUL SCANTEL</option><option>SAUVAGE FOR MEN</option><option>ORTO PARISI MEGMARE</option><option>Jean Paul LEMALE ELIXIER</option></optgroup>
-</select>
-<label for="message">Meddelande</label><textarea id="message" placeholder="Antal, önskad doft eller annan information..."></textarea>
-<button class="order-button" type="submit">Skicka beställning via WhatsApp</button>
-</form>
+
+    <h2>
+        Shop / Beställ
+    </h2>
+
+    <p>
+        Fyll i formuläret så kontaktar vi dig
+        för att bekräfta beställningen.
+    </p>
+
+
+    <form
+        class="order-form"
+        id="orderForm"
+    >
+
+        <label for="name">
+            Namn
+        </label>
+
+        <input
+            id="name"
+            type="text"
+            required
+        >
+
+
+        <label for="address">
+            Adress
+        </label>
+
+        <input
+            id="address"
+            type="text"
+            required
+        >
+
+
+        <label for="phone">
+            Telefon
+        </label>
+
+        <input
+            id="phone"
+            type="tel"
+            required
+        >
+
+
+        <label for="product">
+            Produkt
+        </label>
+
+        <select
+            id="product"
+            required
+        >
+
+            <option
+                value=""
+                disabled
+                selected
+            >
+                Välj produkt
+            </option>
+
+            <optgroup label="Hår & Skägg">
+
+                <option>
+                    Curling Styling Cream
+                </option>
+
+                <option>
+                    Batana Oil
+                </option>
+
+                <option>
+                    Shampoo
+                </option>
+
+                <option>
+                    Beard Oil
+                </option>
+
+            </optgroup>
+
+
+            <optgroup label="Parfym">
+
+                <option>
+                    JEAN PAUL SCANTEL
+                </option>
+
+                <option>
+                    SAUVAGE FOR MEN
+                </option>
+
+                <option>
+                    ORTO PARISI MEGMARE
+                </option>
+
+                <option>
+                    Jean Paul LEMALE ELIXIER
+                </option>
+
+            </optgroup>
+
+        </select>
+
+
+        <label for="message">
+            Meddelande
+        </label>
+
+        <textarea
+            id="message"
+            placeholder="Antal, önskad doft eller annan information..."
+        ></textarea>
+
+
+        <button
+            class="order-button"
+            type="submit"
+        >
+            Skicka beställning via WhatsApp
+        </button>
+
+    </form>
+
 </section>
+
+
+<!-- =====================================================
+     BOOKING
+===================================================== -->
 
 <section id="booking">
-<h2>Book an Appointment</h2><div class="booking-box"><p>Välj hur du vill boka din tid.</p>
-<div class="booking-buttons">
-<a href="https://wa.me/46764274107?text=Hej! jag vill boka en klipptid" target="_blank" rel="noopener">Boka via WhatsApp</a>
-<a href="https://calendar.google.com/calendar/u/0/r/eventedit" target="_blank" rel="noopener">Boka online</a>
-</div></div>
+
+    <h2>
+        Book an Appointment
+    </h2>
+
+    <div class="booking-box">
+
+        <p>
+            Välj hur du vill boka din tid.
+        </p>
+
+        <div class="booking-buttons">
+
+            <a
+                href="https://wa.me/46764274107?text=Hej!%20Jag%20vill%20boka%20en%20klipptid"
+                target="_blank"
+                rel="noopener"
+            >
+                Boka via WhatsApp
+            </a>
+
+            <a
+                href="https://calendar.google.com/calendar/u/0/r/eventedit"
+                target="_blank"
+                rel="noopener"
+            >
+                Boka online
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     MAP
+===================================================== -->
 
 <section id="map">
-<h2>Find Us</h2><div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.932726416089!2d14.17622615!3d58.39727835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465a1a3b!2sJ%C3%B6nk%C3%B6ping!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+
+    <h2>
+        Find Us
+    </h2>
+
+    <div class="map-container">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.932726416089!2d14.17622615!3d58.39727835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465a1a3b!2sJ%C3%B6nk%C3%B6ping!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+        ></iframe>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact">
-<h2>Contact</h2><div class="contact-box"><p><strong>Telefon:</strong> 07X-XXX XX XX</p><p><strong>Email:</strong> KaajoCutz@gmail.com</p><p><strong>Ort:</strong> Jönköping / Skara</p></div>
+
+    <h2>
+        Contact
+    </h2>
+
+    <div class="contact-box">
+
+        <p>
+            <strong>Telefon:</strong>
+            07X-XXX XX XX
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            KaajoCutz@gmail.com
+        </p>
+
+        <p>
+            <strong>Ort:</strong>
+            Jönköping / Skara
+        </p>
+
+    </div>
+
 </section>
+
 </main>
 
-<footer><p>&copy; 2026 <strong>KaajoCutz</strong> — Barber • Grooming • Fragrance</p></footer>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        &copy; 2026
+        <strong>KaajoCutz</strong>
+        — Barber • Grooming • Fragrance
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     PERFUME MODAL
+===================================================== -->
+
+<div
+    class="perfume-modal"
+    id="perfumeModal"
+    aria-hidden="true"
+>
+
+    <div class="perfume-modal-content">
+
+        <button
+            class="modal-close"
+            type="button"
+            aria-label="Stäng"
+        >
+            ×
+        </button>
+
+        <button
+            class="modal-prev"
+            type="button"
+            aria-label="Föregående bild"
+        >
+            ‹
+        </button>
+
+        <img
+            class="perfume-modal-image"
+            src=""
+            alt=""
+        >
+
+        <button
+            class="modal-next"
+            type="button"
+            aria-label="Nästa bild"
+        >
+            ›
+        </button>
+
+    </div>
+
+</div>
+
 
 <script>
-function selectProduct(productName){
-    const product=document.getElementById("product");
-    product.value=productName;
-    document.getElementById("order").scrollIntoView({behavior:"smooth"});
+
+/* =========================================================
+   PERFUME GALLERY
+========================================================= */
+
+document
+    .querySelectorAll(".perfume-card")
+    .forEach(function(card) {
+
+        const images =
+            JSON.parse(card.dataset.images);
+
+        const main =
+            card.querySelector(".perfume-main-image");
+
+        const thumbs =
+            card.querySelector(".perfume-thumbnails");
+
+        const counter =
+            card.querySelector(".perfume-counter");
+
+        const prev =
+            card.querySelector(".prev");
+
+        const next =
+            card.querySelector(".next");
+
+        let current = 0;
+
+
+        function show(index) {
+
+            current =
+                (index + images.length) %
+                images.length;
+
+            main.src =
+                images[current];
+
+            counter.textContent =
+                (current + 1) +
+                " / " +
+                images.length;
+
+
+            card
+                .querySelectorAll(".perfume-thumb")
+                .forEach(function(thumb, i) {
+
+                    thumb.classList.toggle(
+                        "active",
+                        i === current
+                    );
+
+                });
+
+        }
+
+
+        /* CREATE THUMBNAILS */
+
+        images.forEach(function(src, index) {
+
+            const button =
+                document.createElement("button");
+
+            button.type = "button";
+
+            button.className =
+                "perfume-thumb" +
+                (index === 0
+                    ? " active"
+                    : "");
+
+
+            const image =
+                document.createElement("img");
+
+            image.src = src;
+
+            image.alt =
+                card.dataset.perfume +
+                " bild " +
+                (index + 1);
+
+            image.loading = "lazy";
+
+
+            button.appendChild(image);
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    show(index);
+
+                }
+            );
+
+
+            thumbs.appendChild(button);
+
+        });
+
+
+        /* ARROWS */
+
+        prev.addEventListener(
+            "click",
+            function() {
+
+                show(current - 1);
+
+            }
+        );
+
+
+        next.addEventListener(
+            "click",
+            function() {
+
+                show(current + 1);
+
+            }
+        );
+
+
+        /* IMAGE MODAL */
+
+        main.addEventListener(
+            "click",
+            function() {
+
+                openPerfumeModal(
+                    images,
+                    current,
+                    card.dataset.perfume
+                );
+
+            }
+        );
+
+
+        /* KEYBOARD */
+
+        card.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "ArrowLeft") {
+                    show(current - 1);
+                }
+
+                if (event.key === "ArrowRight") {
+                    show(current + 1);
+                }
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   PERFUME MODAL
+========================================================= */
+
+const perfumeModal =
+    document.getElementById(
+        "perfumeModal"
+    );
+
+const perfumeModalImage =
+    perfumeModal.querySelector(
+        ".perfume-modal-image"
+    );
+
+let modalImages = [];
+
+let modalIndex = 0;
+
+
+function openPerfumeModal(
+    images,
+    index,
+    name
+) {
+
+    modalImages = images;
+
+    modalIndex = index;
+
+    perfumeModalImage.alt = name;
+
+    updateModalImage();
+
+    perfumeModal.classList.add("open");
+
+    perfumeModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.style.overflow =
+        "hidden";
 }
-document.getElementById("orderForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    const name=document.getElementById("name").value.trim();
-    const address=document.getElementById("address").value.trim();
-    const phone=document.getElementById("phone").value.trim();
-    const product=document.getElementById("product").value;
-    const message=document.getElementById("message").value.trim();
-    const text="Hej! Jag vill göra en beställning från KaajoCutz.%0A%0A"+
-        "Namn: "+encodeURIComponent(name)+"%0A"+
-        "Adress: "+encodeURIComponent(address)+"%0A"+
-        "Telefon: "+encodeURIComponent(phone)+"%0A"+
-        "Produkt: "+encodeURIComponent(product)+"%0A"+
-        "Meddelande: "+encodeURIComponent(message);
-    window.open("https://wa.me/46764274107?text="+text,"_blank");
-});
+
+
+function updateModalImage() {
+
+    perfumeModalImage.src =
+        modalImages[modalIndex];
+
+}
+
+
+function closePerfumeModal() {
+
+    perfumeModal.classList.remove(
+        "open"
+    );
+
+    perfumeModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+perfumeModal
+    .querySelector(".modal-close")
+    .addEventListener(
+        "click",
+        closePerfumeModal
+    );
+
+
+perfumeModal
+    .querySelector(".modal-prev")
+    .addEventListener(
+        "click",
+        function() {
+
+            modalIndex =
+                (modalIndex - 1 +
+                modalImages.length) %
+                modalImages.length;
+
+            updateModalImage();
+
+        }
+    );
+
+
+perfumeModal
+    .querySelector(".modal-next")
+    .addEventListener(
+        "click",
+        function() {
+
+            modalIndex =
+                (modalIndex + 1) %
+                modalImages.length;
+
+            updateModalImage();
+
+        }
+    );
+
+
+perfumeModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            perfumeModal
+        ) {
+
+            closePerfumeModal();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   KEYBOARD MODAL
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            !perfumeModal.classList.contains(
+                "open"
+            )
+        ) {
+            return;
+        }
+
+
+        if (event.key === "Escape") {
+
+            closePerfumeModal();
+
+        }
+
+
+        if (
+            event.key ===
+            "ArrowLeft"
+        ) {
+
+            modalIndex =
+                (modalIndex - 1 +
+                modalImages.length) %
+                modalImages.length;
+
+            updateModalImage();
+
+        }
+
+
+        if (
+            event.key ===
+            "ArrowRight"
+        ) {
+
+            modalIndex =
+                (modalIndex + 1) %
+                modalImages.length;
+
+            updateModalImage();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PRODUCT SELECTION
+========================================================= */
+
+function selectProduct(productName) {
+
+    const product =
+        document.getElementById(
+            "product"
+        );
+
+
+    product.value =
+        productName;
+
+
+    document
+        .getElementById("order")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================================================
+   ORDER FORM → WHATSAPP
+========================================================= */
+
+document
+    .getElementById("orderForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
+
+
+            const address =
+                document
+                    .getElementById("address")
+                    .value
+                    .trim();
+
+
+            const phone =
+                document
+                    .getElementById("phone")
+                    .value
+                    .trim();
+
+
+            const product =
+                document
+                    .getElementById("product")
+                    .value;
+
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+            const text =
+                "Hej! Jag vill göra en beställning från KaajoCutz.\n\n" +
+
+                "Namn: " +
+                name +
+                "\n" +
+
+                "Adress: " +
+                address +
+                "\n" +
+
+                "Telefon: " +
+                phone +
+                "\n" +
+
+                "Produkt: " +
+                product +
+                "\n" +
+
+                "Meddelande: " +
+                message;
+
+
+            const whatsappURL =
+                "https://wa.me/46764274107?text=" +
+                encodeURIComponent(text);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   SIMPLE SCROLL ANIMATION
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.style.opacity =
+                            "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.08
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".service-card, .card, .perfume-card"
+    )
+    .forEach(function(element) {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(20px)";
+
+        element.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        observer.observe(element);
+
+    });
+
 </script>
+
 </body>
 </html>
